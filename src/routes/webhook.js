@@ -79,10 +79,7 @@ router.post('/organization', (req, res, next) => {
 
     // Find the hook
     for (let orgHook of hooks.organizationHooks) {
-      if (
-        (req.body.hasOwnProperty('repository') && req.body.repository.owner.name.toLowerCase() === orgHook.organization.toLowerCase()) ||
-        (req.body.hasOwnProperty('organization') && req.body.organization.login.toLowerCase() === orgHook.organization.toLowerCase())
-      ) {
+      if (req.body.hasOwnProperty('organization') && req.body.organization.login.toLowerCase() === orgHook.organization.toLowerCase()) {
         req.hook = orgHook;
         req.hookType = 'organization';
         return next();
