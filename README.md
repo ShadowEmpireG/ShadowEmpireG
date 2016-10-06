@@ -1,6 +1,11 @@
 # Git-to-Discord
 A simple Node.js webserver to process incoming GitHub webhooks and send the data to Discord through their incoming webhooks.
 
+# **DEPRECATED**
+Discord released their own internal version of this.
+
+![Discord + GitHub](http://i.imgur.com/8u5aECS.png)
+
 **WARNING!**
 Discord incoming webhooks are currently only in the canary build of the API.
 The code in this repository may break at any time.
